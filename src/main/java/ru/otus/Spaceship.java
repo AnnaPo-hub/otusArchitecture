@@ -1,2 +1,4 @@
-package ru.otus;public class Spaceship {
+package ru.otus;
+
+public class Spaceship {
 }

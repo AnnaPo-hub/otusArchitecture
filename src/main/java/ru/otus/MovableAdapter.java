@@ -1,6 +1,6 @@
 package ru.otus;
 
-public class MovableAdapter implements IMovable{
+public class MovableAdapter implements IMovable {
 
     @Override
     public Vector getLocation() {

@@ -9,7 +9,6 @@ public class MovableAdapter implements IMovable {
 
     @Override
     public void setLocation(Vector newValue) {
-
     }
 
     @Override

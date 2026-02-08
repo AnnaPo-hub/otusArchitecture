@@ -11,11 +11,6 @@ public class CommandProcessor {
         this.queue = queue;
         this.registry = registry;
     }
-
-    public void addCommand(ICommand cmd) {
-        queue.add(cmd);
-    }
-
     public boolean processCommand() {
         ICommand currCmd = queue.poll();
         if (currCmd == null) {

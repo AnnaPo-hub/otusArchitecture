@@ -3,12 +3,16 @@ package ru.otus;
 public class RetryTwiceCommand implements ICommand {
     private final ICommand originalCommand;
 
-    public RetryTwiceCommand(ICommand iCommand) {
-        this.originalCommand = iCommand;
+    public RetryTwiceCommand(ICommand originalCommand) {
+        this.originalCommand = originalCommand;
     }
 
     @Override
     public void execute() throws Exception {
         originalCommand.execute();
+    }
+
+    public ICommand getOriginalCommand() {
+        return originalCommand;
     }
 }

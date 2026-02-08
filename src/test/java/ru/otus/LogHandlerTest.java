@@ -2,6 +2,9 @@ package ru.otus;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.otus.command.ICommand;
+import ru.otus.command.LogExceptionCommand;
+import ru.otus.handlers.LogHandler;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -29,7 +32,6 @@ class LogHandlerTest {
     static class SuccessCommand implements ICommand {
         @Override
         public void execute() {
-            ///
         }
     }
 }

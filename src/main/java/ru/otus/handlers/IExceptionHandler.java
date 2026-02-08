@@ -1,4 +1,6 @@
-package ru.otus;
+package ru.otus.handlers;
+
+import ru.otus.command.ICommand;
 
 import java.util.Queue;
 

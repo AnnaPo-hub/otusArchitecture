@@ -2,6 +2,8 @@ package ru.otus;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
+import ru.otus.command.ICommand;
+import ru.otus.handlers.IExceptionHandler;
 
 public class ExceptionHandlerRegistry {
 

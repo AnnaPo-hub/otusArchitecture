@@ -1,9 +1,9 @@
-package ru.otus;
+package ru.otus.command;
 
-public class RetryTwiceCommand implements ICommand {
+public class RetryOnceCommand implements ICommand {
     private final ICommand originalCommand;
 
-    public RetryTwiceCommand(ICommand originalCommand) {
+    public RetryOnceCommand(ICommand originalCommand) {
         this.originalCommand = originalCommand;
     }
 

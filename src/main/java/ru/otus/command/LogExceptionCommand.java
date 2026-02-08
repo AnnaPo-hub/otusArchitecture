@@ -1,4 +1,4 @@
-package ru.otus;
+package ru.otus.command;
 
 public class LogExceptionCommand implements ICommand {
     private final ICommand failedCommand;

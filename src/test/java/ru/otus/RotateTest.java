@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.otus.command.RotateCommand;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
@@ -19,7 +20,7 @@ class RotateTest {
         when(rotatable.getAngle()).thenReturn(90.0);
         when(rotatable.getAngleVelocity()).thenReturn(30.0);
 
-        Rotate rotate = new Rotate(rotatable);
+        RotateCommand rotate = new RotateCommand(rotatable);
         rotate.execute();
 
         verify(rotatable).setAngle(120.0);
@@ -36,7 +37,7 @@ class RotateTest {
                 .when(rotatable)
                 .setAngle(anyDouble());
 
-        Rotate rotate = new Rotate(rotatable);
+        RotateCommand rotate = new RotateCommand(rotatable);
         assertThrows(RuntimeException.class, rotate::execute);
     }
 
@@ -47,7 +48,7 @@ class RotateTest {
 
         when(rotatable.getAngleVelocity()).thenThrow(new RuntimeException());
 
-        Rotate rotate = new Rotate(rotatable);
+        RotateCommand rotate = new RotateCommand(rotatable);
         assertThrows(RuntimeException.class, rotate::execute);
     }
 
@@ -56,7 +57,7 @@ class RotateTest {
 
         when(rotatable.getAngle()).thenThrow(new RuntimeException());
 
-        Rotate rotate = new Rotate(rotatable);
+        RotateCommand rotate = new RotateCommand(rotatable);
         assertThrows(RuntimeException.class, rotate::execute);
     }
 }

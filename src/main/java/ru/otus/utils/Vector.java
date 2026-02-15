@@ -1,4 +1,4 @@
-package ru.otus;
+package ru.otus.utils;
 
 //Vector знает математику
 public class Vector {
@@ -10,7 +10,7 @@ public class Vector {
         this.y = y;
     }
 
-    Vector add(Vector vector) {
+    public Vector add(Vector vector) {
         return new Vector((x + vector.x), (y + vector.y));
     }
 

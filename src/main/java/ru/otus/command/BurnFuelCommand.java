@@ -1,17 +1,17 @@
 package ru.otus.command;
 
-import ru.otus.Spaceship;
+import ru.otus.IFuelable;
 
 public class BurnFuelCommand implements ICommand {
 
-    private final Spaceship spaceship;
+    private final IFuelable fuelable;
 
-    public BurnFuelCommand(Spaceship spaceship) {
-        this.spaceship = spaceship;
+    public BurnFuelCommand(IFuelable fuelable ) {
+        this.fuelable = fuelable;
     }
 
     @Override
     public void execute() throws Exception {
-        spaceship.setFuel(spaceship.getFuel() - spaceship.getFuelBurnRate());
+        fuelable.setFuel(fuelable.getFuel() - fuelable.getFuelBurnRate());
     }
 }

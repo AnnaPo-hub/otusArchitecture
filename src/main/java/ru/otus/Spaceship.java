@@ -1,6 +1,8 @@
 package ru.otus;
 
-public class Spaceship {
+import ru.otus.utils.Vector;
+
+public class Spaceship  {
     private Vector location;
     private Vector velocity;
     private double fuel;
@@ -31,5 +33,9 @@ public class Spaceship {
 
     public double getFuelBurnRate() {
         return fuelBurnRate;
+    }
+
+    public void setLocation(Vector location) {
+        this.location = location;
     }
 }

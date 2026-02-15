@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.otus.command.MoveCommand;
+import ru.otus.utils.Vector;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class MoveTest {
+class MoveCommandTest {
 
     @Mock
     IMovable movable;
@@ -19,7 +21,7 @@ class MoveTest {
         when(movable.getLocation()).thenReturn(new Vector(12, 5));
         when(movable.getVelocity()).thenReturn(new Vector(-7, 3));
 
-        Move move = new Move(movable);
+        MoveCommand move = new MoveCommand(movable);
         move.execute();
 
         verify(movable).setLocation(new Vector(5, 8));
@@ -36,7 +38,7 @@ class MoveTest {
                 .when(movable)
                 .setLocation(any());
 
-        Move move = new Move(movable);
+        MoveCommand move = new MoveCommand(movable);
         assertThrows(RuntimeException.class, move::execute);
     }
 
@@ -47,7 +49,7 @@ class MoveTest {
 
         when(movable.getVelocity()).thenThrow(new RuntimeException());
 
-        Move move = new Move(movable);
+        MoveCommand move = new MoveCommand(movable);
         assertThrows(RuntimeException.class, move::execute);
     }
 
@@ -56,7 +58,7 @@ class MoveTest {
 
         when(movable.getLocation()).thenThrow(new RuntimeException());
 
-        Move move = new Move(movable);
+        MoveCommand move = new MoveCommand(movable);
         assertThrows(RuntimeException.class, move::execute);
     }
 }

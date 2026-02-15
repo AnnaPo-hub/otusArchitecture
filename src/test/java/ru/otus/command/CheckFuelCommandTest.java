@@ -21,7 +21,7 @@ class CheckFuelCommandTest {
         assertEquals("Movement is impossible: not enough fuel", ex.getMessage());
 
     }
-    ///И ещё: если burnRate = 0, то топлива “всегда хватает”  - отдельный крайний кейс (можно потом тестом).
+  ///И ещё: если burnRate = 0, то топлива “всегда хватает”  - отдельный крайний кейс (можно потом тестом).
 
     @Test
     void shouldNotThrowWhenFuelIsEnough() {

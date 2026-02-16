@@ -1,7 +1,7 @@
 package ru.otus.adapter;
 
 import ru.otus.IFuelable;
-import ru.otus.Spaceship;
+import ru.otus.dto.Spaceship;
 
 public class FuelableAdapter implements IFuelable {
     Spaceship spaceship;

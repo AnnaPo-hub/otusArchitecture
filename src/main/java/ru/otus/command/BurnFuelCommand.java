@@ -6,7 +6,7 @@ public class BurnFuelCommand implements ICommand {
 
     private final IFuelable fuelable;
 
-    public BurnFuelCommand(IFuelable fuelable ) {
+    public BurnFuelCommand(IFuelable fuelable) {
         this.fuelable = fuelable;
     }
 

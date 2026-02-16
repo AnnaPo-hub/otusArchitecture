@@ -1,7 +1,7 @@
 package ru.otus.command;
 
 import org.junit.jupiter.api.Test;
-import ru.otus.Spaceship;
+import ru.otus.dto.Spaceship;
 import ru.otus.adapter.FuelableAdapter;
 import ru.otus.utils.Vector;
 import ru.otus.exception.CommandException;

@@ -1,4 +1,4 @@
-package ru.otus;
+package ru.otus.dto;
 
 import ru.otus.utils.Vector;
 
@@ -7,6 +7,7 @@ public class Spaceship  {
     private Vector velocity;
     private double fuel;
     private final double fuelBurnRate;
+
 
     public Spaceship(Vector location, Vector velocity, double fuel, double fuelBurnRate) {
         this.location = location;
@@ -37,5 +38,8 @@ public class Spaceship  {
 
     public void setLocation(Vector location) {
         this.location = location;
+    }
+    public void setVelocity(Vector velocity) {
+        this.velocity = velocity;
     }
 }

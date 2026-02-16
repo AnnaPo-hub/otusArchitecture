@@ -1,5 +1,5 @@
 package ru.otus.command;
 
 public interface ICommand {
-   void execute() throws Exception;
+    void execute() throws Exception;
 }

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.otus.IFuelable;
 import ru.otus.adapter.FuelableAdapter;
-import ru.otus.Spaceship;
+import ru.otus.dto.Spaceship;
 import ru.otus.utils.Vector;
 
 class BurnFuelCommandTest {

@@ -2,7 +2,8 @@ package ru.otus.command;
 
 import ru.otus.IRotatable;
 
-public class RotateCommand {
+//для всех rotatable
+public class RotateCommand implements ICommand {
     private final IRotatable rotatable;
 
     public RotateCommand(IRotatable obj) {

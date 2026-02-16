@@ -4,7 +4,7 @@ import ru.otus.IFuelable;
 import ru.otus.dto.Spaceship;
 
 public class FuelableAdapter implements IFuelable {
-    Spaceship spaceship;
+    private final Spaceship spaceship;
 
     public FuelableAdapter(Spaceship spaceship) {
         this.spaceship = spaceship;

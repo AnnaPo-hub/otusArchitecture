@@ -6,7 +6,7 @@ import ru.otus.utils.Vector;
 
 public class MovableAdapter implements IMovable {
 
-    Spaceship spaceship;
+    private final Spaceship spaceship;
 
     public MovableAdapter(Spaceship spaceship) {
         this.spaceship = spaceship;

@@ -6,7 +6,7 @@ import ru.otus.utils.Vector;
 
 public class VelocityChangeableAdapter implements IVelocityChangeable {
 
-    Spaceship spaceship;
+    private final Spaceship spaceship;
 
     public VelocityChangeableAdapter(Spaceship spaceship) {
         this.spaceship = spaceship;

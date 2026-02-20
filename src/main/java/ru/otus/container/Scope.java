@@ -1,6 +1,7 @@
 package ru.otus.container;
 
 import java.util.Map;
+import java.util.Objects;
 
 //версия "словаря"
 public class Scope {
@@ -10,9 +11,11 @@ public class Scope {
     private final Scope parent;
 
     public Scope(Map<String, IFactory> map, Scope parent) {
-        this.map = map;
+        this.map = Objects.requireNonNull(map, "Map must not be null");
         this.parent = parent;
     }
+
+
 
     //найти фабрику и вызвать ее
     public <T> T resolve(String key, Object... args) {

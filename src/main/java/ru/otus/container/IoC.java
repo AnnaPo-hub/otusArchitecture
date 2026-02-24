@@ -21,6 +21,18 @@ public class IoC {
         return currentScope.get();
     }
 
+    public static void setCurrentScope(Scope scope) {
+        currentScope.set(scope);
+    }
+
+    public static Map<String, Scope> getCatalogue() {
+        return catalogue.get();
+    }
+
+    public static ThreadLocal<Scope> getCurrentScopeHolder() {
+        return currentScope;
+    }
+
     public static void init(Scope root) {
         currentScope = ThreadLocal.withInitial(() -> new Scope(new HashMap<>(), root));
         catalogue = ThreadLocal.withInitial(HashMap::new);

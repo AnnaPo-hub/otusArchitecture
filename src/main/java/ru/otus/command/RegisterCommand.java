@@ -1,26 +1,23 @@
 package ru.otus.command;
 
+import ru.otus.container.IFactory;
 import ru.otus.container.Scope;
 import ru.otus.exception.CommandException;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class RegisterCommand implements ICommand {
-    private final String scopeId;
-    private final Map<String, Scope> catalogue;
-    private final Scope parent;
+    private final String key;
+    private final IFactory factory;
+    private final Scope scope;
 
 
-    public RegisterCommand(String scopeId, Scope parent, Map<String, Scope> catalogue ) {
-        this.scopeId = scopeId;
-        this.parent = parent;
-        this.catalogue = catalogue;
+    public RegisterCommand(String key, IFactory factory, Scope scope) {
+        this.key = key;
+        this.factory = factory;
+        this.scope = scope;
     }
 
     @Override
     public void execute() throws CommandException {
-        Scope scope = new Scope(new HashMap<>(), parent);
-        catalogue.put(scopeId, scope);
+        scope.register(key, factory);
     }
 }

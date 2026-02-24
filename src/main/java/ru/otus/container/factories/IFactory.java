@@ -1,4 +1,4 @@
-package ru.otus.container;
+package ru.otus.container.factories;
 
 @FunctionalInterface
 public interface IFactory {

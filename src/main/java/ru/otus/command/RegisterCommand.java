@@ -1,6 +1,6 @@
 package ru.otus.command;
 
-import ru.otus.container.IFactory;
+import ru.otus.container.factories.IFactory;
 import ru.otus.container.Scope;
 import ru.otus.exception.CommandException;
 

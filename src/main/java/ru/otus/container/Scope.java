@@ -1,5 +1,7 @@
 package ru.otus.container;
 
+import ru.otus.container.factories.IFactory;
+
 import java.util.Map;
 import java.util.Objects;
 
@@ -14,8 +16,6 @@ public class Scope {
         this.map = Objects.requireNonNull(map, "Map must not be null");
         this.parent = parent;
     }
-
-
 
     //найти фабрику и вызвать ее
     public <T> T resolve(String key, Object... args) {
@@ -32,7 +32,6 @@ public class Scope {
 
         throw new RuntimeException("Dependency not found: " + key);
     }
-
 
     public void register(String key, IFactory factory) {
         map.put(key, factory);

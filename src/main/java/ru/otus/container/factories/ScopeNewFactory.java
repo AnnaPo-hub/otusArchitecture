@@ -1,6 +1,7 @@
-package ru.otus.container;
+package ru.otus.container.factories;
 
 import ru.otus.command.ScopeNewCommand;
+import ru.otus.container.IoC;
 
 public class ScopeNewFactory implements IFactory {
     @Override

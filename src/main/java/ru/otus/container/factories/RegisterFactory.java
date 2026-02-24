@@ -1,6 +1,7 @@
-package ru.otus.container;
+package ru.otus.container.factories;
 
 import ru.otus.command.RegisterCommand;
+import ru.otus.container.IoC;
 
 public class RegisterFactory implements IFactory {
     @Override
